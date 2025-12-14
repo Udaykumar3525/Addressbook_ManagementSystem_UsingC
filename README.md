@@ -61,73 +61,51 @@ saveContactsToFile() writes data to contacts.csv
 Program Ends
 
 5. Function-Level Summary
-main.c
 
+main.c
 main()
 Initializes the address book, displays the menu, and calls required functions.
 
 contact.c
-
 initialize() – Loads existing contacts into memory
-
 createContact() – Takes user input, validates it, and adds a new contact
-
 searchContact() – Searches contacts by name, phone number, or email
-
 editContact() – Updates contact details after validation
-
 deleteContact() – Deletes a contact and shifts remaining records
-
 listContacts() – Sorts contacts alphabetically and displays them
 
 file.c
-
 loadContactsFromFile() – Reads contacts from contacts.csv into memory
-
 saveContactsToFile() – Writes current contact list to contacts.csv
 
 validation.c
-
 validation_name()
-
-First letter must be capital
-
-Only alphabets allowed
-
-After space, capital letter is allowed
+- First letter must be capital
+- Only alphabets allowed
+- After space, capital letter is allowed
 
 validation_number()
-
-Exactly 10 digits
-
-Only numeric characters allowed
+- Exactly 10 digits
+- Only numeric characters allowed
 
 validation_email()
-
-At least one character before @
-
-Only lowercase letters
-
-Numbers and underscore allowed
-
-Valid email domain format
+- At least one character before @
+- Only lowercase letters
+- Numbers and underscore allowed
+- Valid email domain format
 
 6. How to Compile and Run
-Compile
-gcc *.c
-
-Run
-./a.out
+Compile - gcc *.c
+Run - ./a.out
 
 Program Behavior
-
 Loads existing contacts at startup
-
 Menu-driven operations
-
 Saves updated contacts before exiting
 
+
 7. Sample Input and Output
+
 Address Book Menu
 1. Create contact 🆕
 2. Search contact 🔎
@@ -148,16 +126,10 @@ Are you really want to exit from Create contact ? (y/n): y
 Exiting successfully...
 
 Search Contact
-
 Search by Name
-
 If only one contact exists → displayed directly
-
 If multiple contacts exist → user selects using phone or email
-
-Search by Phone / Email
-
-Always unique → single contact displayed
+Search by Phone / Email - Always unique → single contact displayed
 
 Enter your choice: 2
 --------> Search Contact <--------
@@ -168,16 +140,10 @@ Phone = 1234567890
 Email = uday@gmail.com
 
 Edit Contact
-
 Edit by Name
-
 Single contact → directly edit
-
 Multiple contacts → select by index
-
-Edit by Phone / Email
-
-Always unique
+Edit by Phone / Email - Always unique
 
 Enter your choice: 3
 --------> Edit Contact <--------
@@ -186,16 +152,10 @@ Enter the new name : Uppu
 Name updated successfully ✔️
 
 Delete Contact
-
 Delete by Name
-
 Single contact → deleted directly
-
 Multiple contacts → select using phone or email
-
-Delete by Phone / Email
-
-Always unique
+Delete by Phone / Email - Always unique
 
 Enter your choice: 4
 --------> Delete Contact <--------
@@ -211,19 +171,13 @@ Other Options
 
 This project is a fully functional Address Book Management System developed using modular C programming.
 It clearly separates contact management, file handling, and validation logic into independent modules.
-
 Data persistence is achieved using a CSV file, making the application simple, efficient, and easy to extend.
 
 9. Learning Outcomes
 
 Designing structured data using struct in C
-
 Performing file input/output operations
-
 Writing modular and maintainable code
-
 Applying input validation techniques
-
 Developing complete CRUD-based applications
-
 Improving debugging and C programming skills
